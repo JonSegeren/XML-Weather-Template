@@ -20,9 +20,38 @@ namespace XMLWeather
         public void DisplayCurrent()
         {
             cityOutput.Text = Form1.days[0].location;
-            tempLabel.Text = Form1.days[0].currentTemp;
-            minOutput.Text = Form1.days[0].tempLow;
-            maxOutput.Text = Form1.days[0].tempHigh;
+            tempLabel.Text = Convert.ToDouble(Form1.days[0].currentTemp).ToString("0.") + "°C";
+            minLabel.Text = Convert.ToDouble(Form1.days[0].tempLow).ToString("0.") + "°C";
+            maxLabel.Text = Convert.ToDouble(Form1.days[0].tempHigh).ToString("0.") + "°C";
+            humidLabel.Text = Form1.days[0].humidity + "%";
+            pressureLabel.Text = Form1.days[0].pressure + " hPa";
+            conditionLabel.Text = "Condition" +Form1.days[0].condition;
+            //dateLabel.Text = 
+            date2Label.Text = "Today";
+            timeLabel.Text = dateLabel.Text = DateTime.Now.ToString("hh:mm:ss"); 
+
+            switch (Form1.days[0].icon)
+            {
+                case "800":
+                    //put in sunny icon
+                    this.BackColor = Color.SlateBlue;
+                   break;
+                    //overcast icons
+                case "801":
+                    this.BackColor = Color.SlateGray;
+                   break;
+                case "802":
+                    this.BackColor = Color.SlateGray;
+                   break;
+                case "803":
+                    this.BackColor = Color.SlateGray;
+                   break;
+                case "804":
+                    this.BackColor = Color.SlateGray;
+                   break;
+                    //TODO - put the rest of te cases in for the rest of the conditions -- thoonder, snow
+
+            }
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)
