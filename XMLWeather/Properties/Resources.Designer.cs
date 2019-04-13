@@ -63,9 +63,9 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cloudy {
+        internal static System.Drawing.Bitmap cloudi {
             get {
-                object obj = ResourceManager.GetObject("cloudy", resourceCulture);
+                object obj = ResourceManager.GetObject("cloudi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Rain3 {
+        internal static System.Drawing.Bitmap raini {
             get {
-                object obj = ResourceManager.GetObject("Rain3", resourceCulture);
+                object obj = ResourceManager.GetObject("raini", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rainy__2_ {
+        internal static System.Drawing.Bitmap snowi {
             get {
-                object obj = ResourceManager.GetObject("rainy (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("snowi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,19 +93,9 @@ namespace XMLWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snow {
+        internal static System.Drawing.Bitmap sunni {
             get {
-                object obj = ResourceManager.GetObject("snow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sunny {
-            get {
-                object obj = ResourceManager.GetObject("sunny", resourceCulture);
+                object obj = ResourceManager.GetObject("sunni", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

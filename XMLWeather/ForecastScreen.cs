@@ -26,7 +26,6 @@ namespace XMLWeather
             avg1Label.Text = GetAverage(Form1.days[1].tempHigh, Form1.days[1].tempLow);
             condition1.Text = Form1.days[1].condition;
             precip1.Text = Form1.days[1].precipitation;
-            pressure1.Text = Form1.days[1].pressure;
             humid1.Text = Form1.days[1].humidity;
     
             date2.Text = Form1.days[2].date;
@@ -35,7 +34,6 @@ namespace XMLWeather
             avg2.Text = GetAverage(Form1.days[2].tempHigh, Form1.days[2].tempLow);
             condition2.Text = Form1.days[2].condition;
             precip2.Text = Form1.days[2].precipitation;
-            pressure2.Text = Form1.days[2].pressure;
             humid2.Text = Form1.days[2].humidity;
 
             date3.Text = Form1.days[3].date;
@@ -44,68 +42,170 @@ namespace XMLWeather
             avg3.Text = GetAverage(Form1.days[3].tempHigh, Form1.days[3].tempLow);
             condition3.Text = Form1.days[3].condition;
             precip3.Text = Form1.days[3].precipitation;
-            pressure3.Text = Form1.days[3].pressure;
             humid3.Text = Form1.days[3].humidity;
+
+            dateLabel.Text = DateTime.Now.ToString("dd-MM-yy");
+ 
+            timeLabel.Text = DateTime.Now.ToString("hh:mm:ss");
 
             switch (Form1.days[1].icon)
             {
+
                 case "800":
                     //put in sunny icon
-
+                    this.BackColor = Color.SlateBlue;
+                    label1.BackgroundImage = Properties.Resources.sunni;
                     break;
                 //overcast icons
                 case "801":
                     this.BackColor = Color.SlateGray;
+                    label1.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "802":
-
+                    this.BackColor = Color.SlateGray;
+                    label1.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "803":
+                    this.BackColor = Color.SlateGray;
+                    label1.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "804":
-
+                    this.BackColor = Color.SlateGray;
+                    label1.BackgroundImage = Properties.Resources.cloudi;
                     break;
-                    //TODO - put the rest of te cases in for the rest of the conditions -- thoonder, snow
+                //rainy icons
+                case "300":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "301":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "302":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "310":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "311":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "312":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "313":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "314":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "321":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
             }
             switch (Form1.days[2].icon)
             {
                 case "800":
                     //put in sunny icon
-
+                    label2.BackgroundImage = Properties.Resources.sunni;
                     break;
                 //overcast icons
                 case "801":
-                    this.BackColor = Color.SlateGray;
+                    label2.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "802":
-
+                    label2.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "803":
+                    label2.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "804":
-
+                    label2.BackgroundImage = Properties.Resources.cloudi;
                     break;
-                    //TODO - put the rest of te cases in for the rest of the conditions -- thoonder, snow
+                case "300":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "301":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "302":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "310":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "311":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "312":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "313":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "314":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "321":
+                    label2.BackgroundImage = Properties.Resources.raini;
+                    break;
+
             }
             switch (Form1.days[3].icon)
             {
                 case "800":
                     //put in sunny icon
-
+                    label3.BackgroundImage = Properties.Resources.sunni;
                     break;
                 //overcast icons
                 case "801":
-                    this.BackColor = Color.SlateGray;
+                    label3.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "802":
-
+                    label3.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "803":
+                    label3.BackgroundImage = Properties.Resources.cloudi;
                     break;
                 case "804":
-
+                    label3.BackgroundImage = Properties.Resources.cloudi;
                     break;
-                    //TODO - put the rest of te cases in for the rest of the conditions -- thoonder, snow
+                case "300":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "301":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "302":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "310":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "311":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "312":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "313":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "314":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "321":
+                    label3.BackgroundImage = Properties.Resources.raini;
+                    break;
+
             }
         }
 
@@ -125,5 +225,7 @@ namespace XMLWeather
 
             return Convert.ToString(avg);
         }
+
+   
     }
 }

@@ -25,31 +25,73 @@ namespace XMLWeather
             maxLabel.Text = Convert.ToDouble(Form1.days[0].tempHigh).ToString("0.") + "°C";
             humidLabel.Text = Form1.days[0].humidity + "%";
             pressureLabel.Text = Form1.days[0].pressure + " hPa";
-            conditionLabel.Text = "Condition" +Form1.days[0].condition;
-            //dateLabel.Text = 
+            conditionLabel.Text = Form1.days[0].condition;
+            dateLabel.Text = DateTime.Now.ToString("dd-MM-yy");
             date2Label.Text = "Today";
-            timeLabel.Text = dateLabel.Text = DateTime.Now.ToString("hh:mm:ss"); 
+            timeLabel.Text  = DateTime.Now.ToString("hh:mm:ss"); 
 
             switch (Form1.days[0].icon)
             {
                 case "800":
                     //put in sunny icon
                     this.BackColor = Color.SlateBlue;
+                    label1.BackgroundImage = Properties.Resources.sunni;
                    break;
                     //overcast icons
                 case "801":
                     this.BackColor = Color.SlateGray;
-                   break;
+                    label1.BackgroundImage = Properties.Resources.cloudi;
+                    break;
                 case "802":
                     this.BackColor = Color.SlateGray;
-                   break;
+                    label1.BackgroundImage = Properties.Resources.cloudi;
+                    break;
                 case "803":
                     this.BackColor = Color.SlateGray;
-                   break;
+                    label1.BackgroundImage = Properties.Resources.cloudi;
+                    break;
                 case "804":
                     this.BackColor = Color.SlateGray;
-                   break;
-                    //TODO - put the rest of te cases in for the rest of the conditions -- thoonder, snow
+                    label1.BackgroundImage = Properties.Resources.cloudi;
+                    break;
+                    //rainy icons
+                case "300":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "301":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "302":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "310":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "311":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "312":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "313":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "314":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+                case "321":
+                    this.BackColor = Color.DarkCyan;
+                    label1.BackgroundImage = Properties.Resources.raini;
+                    break;
+
 
             }
         }
