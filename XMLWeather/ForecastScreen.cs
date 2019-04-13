@@ -19,30 +19,34 @@ namespace XMLWeather
 
         public void displayForecast()
         {
-            //TODO-add units
+      
+       
             date1.Text = Form1.days[0].date;
-            minLabel.Text = Form1.days[0].tempLow;
-            maxLabel.Text = Form1.days[0].tempHigh;
-            avg1Label.Text = GetAverage(Form1.days[0].tempHigh, Form1.days[0].tempLow);
+            minLabel.Text = Convert.ToDouble(Form1.days[0].tempLow).ToString("0.") + "°C";
+            maxLabel.Text = Convert.ToDouble(Form1.days[0].tempHigh).ToString("0.") + "°C";
+            avg1Label.Text = Convert.ToDouble(Form1.days[0].dayTemp).ToString("0.") + "°C";
             condition1.Text = Form1.days[0].condition;
             precip1.Text = Form1.days[0].precipitation;
-            humid1.Text = Form1.days[0].humidity;
+            humid1.Text = Form1.days[0].humidity + "%" ;
     
+
+            ///these days have an out of index error, can't appear to fix it
+            ///
             date2.Text = Form1.days[1].date;
-            max2Label.Text = Form1.days[1].tempLow;
-            max2Label.Text = Form1.days[2].tempHigh;
-            avg2.Text = GetAverage(Form1.days[1].tempHigh, Form1.days[1].tempLow);
+            max2Label.Text = Convert.ToDouble(Form1.days[1].tempLow).ToString("0.") + "°C";
+            max2Label.Text = Convert.ToDouble(Form1.days[1].tempHigh).ToString("0.") + "°C";
+            avg1Label.Text = Convert.ToDouble(Form1.days[1].dayTemp).ToString("0.") + "°C";
             condition2.Text = Form1.days[1].condition;
             precip2.Text = Form1.days[1].precipitation;
-            humid2.Text = Form1.days[1].humidity;
+            humid2.Text = Form1.days[1].humidity + "%";
 
             date3.Text = Form1.days[2].date;
-            min3.Text = Form1.days[2].tempLow;
-            max3.Text = Form1.days[2].tempHigh;
-            avg3.Text = GetAverage(Form1.days[2].tempHigh, Form1.days[2].tempLow);
+            min3.Text = Convert.ToDouble(Form1.days[2].tempLow).ToString("0.") + "°C";
+            max3.Text = Convert.ToDouble(Form1.days[2].tempHigh).ToString("0.") + "°C";
+            avg1Label.Text = Convert.ToDouble(Form1.days[2].dayTemp).ToString("0.") + "°C";
             condition3.Text = Form1.days[2].condition;
             precip3.Text = Form1.days[2].precipitation;
-            humid3.Text = Form1.days[2].humidity;
+            humid3.Text = Form1.days[2].humidity + "%";
 
             dateLabel.Text = DateTime.Now.ToString("dd-MM-yy");
  
@@ -218,13 +222,6 @@ namespace XMLWeather
             f.Controls.Add(cs);
         }
 
-        public string GetAverage(string min, string max)
-        {
-            int avg = 0;
-            avg = (Convert.ToInt16(min) / Convert.ToInt16(max)) / 2;
-
-            return Convert.ToString(avg);
-        }
 
    
     }
