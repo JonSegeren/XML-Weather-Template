@@ -20,29 +20,29 @@ namespace XMLWeather
         public void displayForecast()
         {
             //TODO-add units
-            date1.Text = Form1.days[1].date;
-            minLabel.Text = Form1.days[1].tempLow;
-            maxLabel.Text = Form1.days[1].tempHigh;
-            avg1Label.Text = GetAverage(Form1.days[1].tempHigh, Form1.days[1].tempLow);
-            condition1.Text = Form1.days[1].condition;
-            precip1.Text = Form1.days[1].precipitation;
-            humid1.Text = Form1.days[1].humidity;
+            date1.Text = Form1.days[0].date;
+            minLabel.Text = Form1.days[0].tempLow;
+            maxLabel.Text = Form1.days[0].tempHigh;
+            avg1Label.Text = GetAverage(Form1.days[0].tempHigh, Form1.days[0].tempLow);
+            condition1.Text = Form1.days[0].condition;
+            precip1.Text = Form1.days[0].precipitation;
+            humid1.Text = Form1.days[0].humidity;
     
-            date2.Text = Form1.days[2].date;
-            max2Label.Text = Form1.days[2].tempLow;
+            date2.Text = Form1.days[1].date;
+            max2Label.Text = Form1.days[1].tempLow;
             max2Label.Text = Form1.days[2].tempHigh;
-            avg2.Text = GetAverage(Form1.days[2].tempHigh, Form1.days[2].tempLow);
-            condition2.Text = Form1.days[2].condition;
-            precip2.Text = Form1.days[2].precipitation;
-            humid2.Text = Form1.days[2].humidity;
+            avg2.Text = GetAverage(Form1.days[1].tempHigh, Form1.days[1].tempLow);
+            condition2.Text = Form1.days[1].condition;
+            precip2.Text = Form1.days[1].precipitation;
+            humid2.Text = Form1.days[1].humidity;
 
-            date3.Text = Form1.days[3].date;
-            min3.Text = Form1.days[3].tempLow;
-            max3.Text = Form1.days[3].tempHigh;
-            avg3.Text = GetAverage(Form1.days[3].tempHigh, Form1.days[3].tempLow);
-            condition3.Text = Form1.days[3].condition;
-            precip3.Text = Form1.days[3].precipitation;
-            humid3.Text = Form1.days[3].humidity;
+            date3.Text = Form1.days[2].date;
+            min3.Text = Form1.days[2].tempLow;
+            max3.Text = Form1.days[2].tempHigh;
+            avg3.Text = GetAverage(Form1.days[2].tempHigh, Form1.days[2].tempLow);
+            condition3.Text = Form1.days[2].condition;
+            precip3.Text = Form1.days[2].precipitation;
+            humid3.Text = Form1.days[2].humidity;
 
             dateLabel.Text = DateTime.Now.ToString("dd-MM-yy");
  
